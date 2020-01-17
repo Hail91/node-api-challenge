@@ -40,13 +40,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+- I learned about express router and how to set it up and it's benefits, also...
+  I learned about setting ports in express. 
+
 - [ ] Describe Middleware?
+
+- Middleware is code that you can run which will interrupt the normal flow of your API and exit out of the flow unless you call "Next()". It's is especially useful for error handling. 
 
 - [ ] Describe a Resource?
 
+- A resource is anything returned out of the API.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+An API can return status codes with custom messages.
+
 - [ ] How can we partition our application into sub-applications?
+
+- We can break our application up into more digestable pieces using express router to organize the different endpoints of our API. 
 
 ## Minimum Viable Product
 
