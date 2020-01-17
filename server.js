@@ -10,6 +10,7 @@ const projectRouter = require('./data/routers/projectRouter');
 
 // Logger Middleware
 
+server.use(logger);
 
 // ------- End
 
@@ -28,6 +29,11 @@ server.get('/', (req, res) => {
 });
 
 // Custom global middleware
+
+function logger(req, res, next) {
+    console.log(`[${new Date().toISOString()}] ${req.method} to ${req.url}`);
+    next();
+  };
 
 // ------- End
 
