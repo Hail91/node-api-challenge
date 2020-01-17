@@ -109,6 +109,12 @@ router.delete('/:id', (req, res) => {
         res.status(204).json({
             message: 'Project successfully deleted!'
         })
+    })
+    .catch(error => {
+        console.log(error)
+        res.status(404).json({
+            errorMessage: 'The specified project ID does not exist'
+        })
     });
 });
 

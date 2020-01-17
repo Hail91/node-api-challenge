@@ -6,8 +6,6 @@ router.use(express.json());
 
 const actions = require('../helpers/actionModel');
 
-
-
 // CRUD OPERATIONS BELOW...
 
 // GET - Get a list of actions from the actions database
@@ -18,6 +16,7 @@ router.get('/', (req, res) => {
         res.status(200).json(action)
     })
     .catch(error => {
+        console.log(error)
         res.status(500).json({
             errorMessage: 'The actions data could not be retrieved'
         })
